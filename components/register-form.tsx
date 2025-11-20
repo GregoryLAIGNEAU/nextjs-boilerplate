@@ -31,9 +31,17 @@ export function RegisterForm({
         <CardContent>
           <form>
             <FieldGroup>
-              <Field>
-                <FieldLabel htmlFor="name">Full Name</FieldLabel>
-                <Input id="name" type="text" placeholder="John Doe" required />
+              <Field className="grid grid-cols-2 gap-4">
+                <Field>
+                  <FieldLabel htmlFor="firstName">First Name</FieldLabel>
+                  <Input id="firstName" type="text" placeholder="John" required />
+                </Field>
+                <Field>
+                  <FieldLabel htmlFor="lastName">
+                    Last Name
+                  </FieldLabel>
+                  <Input id="lastName" type="text" placeholder="Doe" required />
+                </Field>
               </Field>
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -45,21 +53,8 @@ export function RegisterForm({
                 />
               </Field>
               <Field>
-                <Field className="grid grid-cols-2 gap-4">
-                  <Field>
-                    <FieldLabel htmlFor="password">Password</FieldLabel>
-                    <Input id="password" type="password" required />
-                  </Field>
-                  <Field>
-                    <FieldLabel htmlFor="confirm-password">
-                      Confirm Password
-                    </FieldLabel>
-                    <Input id="confirm-password" type="password" required />
-                  </Field>
-                </Field>
-                <FieldDescription>
-                  Must be at least 8 characters long.
-                </FieldDescription>
+                <FieldLabel htmlFor="password">Password</FieldLabel>
+                <Input id="password" type="password" required />
               </Field>
               <Field>
                 <Button type="submit">Create Account</Button>
